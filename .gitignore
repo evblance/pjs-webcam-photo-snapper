@@ -1,0 +1,4 @@
+node_modules/
+
+# Don't package.json lockfile
+package-lock.json

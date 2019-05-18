@@ -1,0 +1,21 @@
+{
+  "name": "pjs-webcam-photo-snapper",
+  "description": "A webcam photo shooter",
+  "version": "0.0.1",
+  "private": true,
+  "author": "evblance",
+  "homepage": "",
+  "bugs": {
+    "url": ""
+  },
+  "scripts": {
+    "start": "browser-sync start --server --files \"./*\""
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.26.5"
+  },
+  "keywords": [],
+  "repository": "",
+  "licenses": []
+}
