@@ -10,6 +10,59 @@
 </head>
 
 <body>
+  <div class="container">
+    <div class="controls">
+      <div class="sliders">
+        <div class="slider-wrapper">
+          <label class="slider-label">Min. RED</label>
+          <input id="redMinCtrl" class="slider" type="range">
+        </div>
+        <div class="slider-wrapper">
+          <label class="slider-label">Min. GREEN</label>
+          <input id="greenMinCtrl" class="slider" type="range">
+        </div>
+        <div class="slider-wrapper">
+          <label class="slider-label">Min. BLUE</label>
+          <input id="blueMinCtrl" class="slider" type="range">
+        </div>
+        <div class="slider-wrapper">
+          <label class="slider-label">Max. RED</label>
+          <input id="redMaxCtrl" class="slider" type="range">
+        </div>
+        <div class="slider-wrapper">
+          <label class="slider-label">Max. GREEN</label>
+          <input id="greenMaxCtrl" class="slider" type="range">
+        </div>
+        <div class="slider-wrapper">
+          <label class="slider-label">Max. BLUE</label>
+          <input id="blueMaxCtrl" class="slider" type="range">
+        </div>
+      </div>
+      <button id="startBtn" class="button" type="button">Start stream</button>
+      <button id="stopBtn" class="button" type="button">End stream</button>
+      <button id="photoBtn" class="button" type="button">Take Photo!</button>
+    </div>
+    <div class="photoreel-container">
+      <div class="snapshots">
+          <div class="snapshot"></div>
+          <div class="snapshot"></div>
+          <div class="snapshot"></div>
+          <div class="snapshot"></div>
+          <div class="snapshot"></div>
+          <div class="snapshot"></div>
+          <div class="snapshot"></div>
+          <div class="snapshot"></div>
+          <div class="snapshot"></div>
+          <div class="snapshot"></div>
+          <div class="snapshot"></div>
+          <div class="snapshot"></div>
+      </div>
+    </div>
+    <div class="output-container">
+      <video id="video" class="webcam-video" autoplay></video>
+      <canvas id="canvas" class="webcam-canvas"></canvas>
+    </div>
+  </div>
   <script src="./webcam-shooter.js"></script>
 </body>
 
