@@ -111,9 +111,17 @@ const stopStream = () => {
  */
 const pushSnapshotToReel = () => {
   const snapshotHolder = document.getElementById(SNAPSHOT_HOLDER_ID);
+  
   // NOTE: We assume that snapshots are the only children of the snapshot holder
   const imageURL = canvas.toDataURL('image/jpeg');
-  snapshotHolder.childNodes[snapshotIndex].style.backgroundImage = `url(${imageURL})`;
+  const targetSnapshot = snapshotHolder.childNodes[snapshotIndex];
+
+  // Set the background image of the snapshot to the data URL so that it shows up as a thumbnail
+  targetSnapshot.style.backgroundImage = `url(${imageURL})`;
+
+  // Set a href attribute to the data URL and allow download on select
+  targetSnapshot.href = imageURL;
+  targetSnapshot.setAttribute('download', 'snapshot');
 };
 
 /**
