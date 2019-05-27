@@ -1,3 +1,148 @@
+:root {
+  --eighteen-percent-grey: rgb(119, 119, 119); /* '18% Grey' */
+
+  --background--photoreel: rgba(30, 30, 30, 0.9);
+  --border-radius--snapshot: 5px;
+  --border-width--snapshot: 1px;
+  --height--photoreel: 130px;
+  --height--reelstrip: 15px;
+  --width--snapshot: 150px;
+
+  --background--filmreel-edge: linear-gradient(
+    180deg,
+    var(--background--photoreel) 0%,
+    var(--background--photoreel) 15%,
+    transparent 15%,
+    transparent 85%,
+    var(--background--photoreel) 85%,
+    var(--background--photoreel) 100%
+  ),
+  repeating-linear-gradient(
+    90deg,
+    var(--background--photoreel) 0px,
+    var(--background--photoreel) 8px,
+    var(--eighteen-percent-grey) 8px,
+    var(--eighteen-percent-grey) 12px,
+    var(--background--photoreel) 12px
+  );
+}
+
 body {
-  background: rgb(119, 119, 119); /* '18% Grey' */
+  background: var(--eighteen-percent-grey);
+  margin: 0;
+  padding: 0;
+}
+
+.button {
+  padding: 0.5rem;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.controls {
+  /* TODO */
+}
+
+.sliders {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-rows: auto;
+  justify-content: center;
+  align-content: center;
+}
+
+.slider {
+  width: 100%;
+}
+
+.slider-label {
+  margin: 0 1rem;
+}
+
+.slider-wrapper {
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  justify-self: center;
+  width: 200px;
+}
+
+.output-container {
+  align-items: center;
+  background: black;
+  border: 1px solid black;
+  display: flex;
+  flex: 1;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+
+.photoreel-container {
+  height: var(--height--photoreel);
+  overflow-x: scroll;
+  padding: 10px 0;
+  position: relative;
+  width: 100vw;
+}
+
+.snapshot {
+  background: rgba(100, 100, 100, 0.5);
+  border: var(--border-width--snapshot) solid transparent;
+  border-radius: 5px;
+  display: block;
+  margin: 2px 5px;
+  flex: 1;
+  height: calc(
+    var(--height--photoreel) -
+    2 * var(--height--reelstrip) -
+    2 * var(--border-width--snapshot)
+    );
+  width: var(--width--snapshot);
+}
+  
+.snapshots { 
+  background: var(--background--photoreel);
+  position: absolute;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  top: 50%;
+  transform: translateY(-50%);
+  height: var(--height--photoreel);
+}
+
+.snapshots::before {
+  background: var(--background--filmreel-edge);
+  content: "";
+  height: var(--height--reelstrip);
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.snapshots::after {
+  background: var(--background--filmreel-edge);
+  bottom: 0;
+  content: "";
+  height: var(--height--reelstrip);
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.webcam-canvas {
+  flex: 1;
+  padding-left: 2px;
+}
+
+.webcam-video {
+  flex: 1;
+  padding-right: 2px;
 }
