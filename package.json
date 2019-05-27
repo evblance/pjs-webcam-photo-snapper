@@ -16,6 +16,6 @@
     "browser-sync": "^2.26.5"
   },
   "keywords": [],
-  "repository": "",
+  "repository": "https://github.com/evblance/pjs-webcam-photo-snapper",
   "licenses": []
 }
