@@ -1,6 +1,6 @@
 // Define constants
 const SNAPSHOT_CLASSNAME = 'snapshot';
-const SNAPSHOT_ELEMENT_TYPE = 'div';
+const SNAPSHOT_ELEMENT_TYPE = 'a';
 const SNAPSHOT_HOLDER_ID = 'snapshotHolder';
 const FILMREEL_LENGTH = 24;
 
