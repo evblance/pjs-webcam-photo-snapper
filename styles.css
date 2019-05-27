@@ -92,7 +92,10 @@ body {
 
 .snapshot {
   background: rgba(100, 100, 100, 0.5);
-  border: var(--border-width--snapshot) solid transparent;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: var(--border-width--snapshot) solid var(--background--photoreel);
   border-radius: 5px;
   display: block;
   margin: 2px 5px;
@@ -104,7 +107,7 @@ body {
     );
   width: var(--width--snapshot);
 }
-  
+
 .snapshots { 
   background: var(--background--photoreel);
   position: absolute;
