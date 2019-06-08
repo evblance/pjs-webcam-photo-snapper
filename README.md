@@ -14,7 +14,7 @@ You can visit the following [link](https://evblance-pjs-webcam-photo-snapper.net
 
 ## How to use
 
-1. Press the `Start stream` button to initialise the webcam stream. You will need to allow your browser to access your for purposes of streaming its video. The stream can be ended anytime by pressing the `End stream` button.
+1. Press the `Start stream` button to initialise the webcam stream. You will need to allow your browser to access your webcam for purposes of streaming its video. The stream can be ended anytime by pressing the `End stream` button.
 2. Make adjustments to the raw feed in the left-hand pane using the control sliders, which will display the live result in the right-hand pane (processed output).
 3. When you're happy with the preview, hit the `Take Photo!` button to store a snap on the photoreel. _Warning: You can only take 24 photos at a time, after which the snapshot buffer will begin to overwrite itself from the beginning._ 
 4. Download the snaps of your choosing by clicking on their thumbnails in the photoreel.
